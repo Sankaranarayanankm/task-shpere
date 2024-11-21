@@ -1,0 +1,96 @@
+.login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.login > h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login__email,
+.login__password {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login__email > label,
+.login__password > label {
+  font-size: 14px;
+  color: #555;
+}
+
+.login__email > input,
+.login__password > input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login__email > input:focus,
+.login__password > input:focus {
+  border-color: #007bff;
+}
+
+.login__button {
+  text-align: center;
+}
+
+.login__button > button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login__button > button:hover {
+  background-color: #0056b3;
+}
+
+.login__button > button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login__error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login__texts {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.login__texts a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login__texts a:hover {
+  text-decoration: underline;
+}
