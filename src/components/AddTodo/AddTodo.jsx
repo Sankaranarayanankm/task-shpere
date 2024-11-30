@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "./AddTodo.css";
+import { useDispatch } from "react-redux";
+import { addNoteHandler } from "../../store/Slices/noteSlice";
 
 const AddTodo = () => {
+  const dispatch = useDispatch();
   const [todo, setTodo] = useState("");
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(todo);
+    const obj = {
+      todo,
+      status: "pending",
+      id: new Date().getTime(),
+    };
+    dispatch(addNoteHandler(obj));
   };
   return (
     <div className="addTodo">

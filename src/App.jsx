@@ -11,6 +11,7 @@ import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import AddTodo from "./components/AddTodo/AddTodo";
 import { useDispatch, useSelector } from "react-redux";
 import { loginHandler } from "./store/Slices/authSlice";
+import TodoList from "./components/TodoList/TodoList";
 const App = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.auth.isAuth);
@@ -26,6 +27,7 @@ const App = () => {
         {isAuth && (
           <Route path="/" exact>
             <AddTodo />
+            <TodoList />
           </Route>
         )}
         {!isAuth && (
